@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/chat", (req, res) => {
-  res.status(200).json({ success: true, chats });
+  res.send(chats);
 });
 
 app.get("/api/chat/:id", (req, res) => {
