@@ -1,11 +1,9 @@
 # Chat Application Schemas
 
 - [Creating a Chat Schema with Mongoose](#creating-a-chat-schema-with-mongoose)
-  - [Chat Schema](#chat-schema)
+
 - [Creating Message Schema](#creating-message-schema)
-  - [Schema Details](#schema-details)
 - [Creating User Schema](#creating-user-schema)
-  - [Schema Details](#schema-details)
 
 ## Creating a Chat Schema with Mongoose
 
