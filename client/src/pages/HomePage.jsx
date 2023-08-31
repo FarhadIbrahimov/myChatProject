@@ -24,12 +24,7 @@ const HomePage = () => {
         borderRadius="md"
         borderWidth="1px"
       >
-        <Text
-          fontSize="4xl"
-          fontFamily="Work Sans"
-          color="black"
-          fontWeight="bold"
-        >
+        <Text fontSize="4xl" fontFamily="Work Sans" fontWeight="bold">
           CHATIO
         </Text>
       </Box>
