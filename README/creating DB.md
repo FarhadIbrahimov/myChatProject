@@ -5,7 +5,6 @@
 3. Install Mongoose in the backend using the command `npm i mongoose`. You can find the official [Mongoose documentation here](https://mongoosejs.com/docs/).
 
 ```javascript
-// In ChatModel.js
 const mongoose = require("mongoose");
 
 const chatModel = mongoose.Schema(
@@ -50,3 +49,43 @@ const chatModel = mongoose.Schema(
 -- groupAdmin: Stores the user ID of the group admin, if the chat is a group chat. Like the previous fields, it's of type mongoose.Schema.Types.ObjectId and refers to the ID of a document in the MongoDB collection associated with the "User" schema.
 
 -- { timestamps: true }: Specifies that each document in this collection should automatically have two fields, createdAt and updatedAt, which track the creation and modification times of each document.
+
+## Creating Message Schema
+
+````javascript
+   const MessageSchema = mongoose.Schema(
+       {
+           sender: {
+               type: mongoose.Schema.Types.ObjectId,
+               ref: "User",
+               required: true,
+           },
+           content: {
+               type: String,
+               trim: true,
+           },
+           chat: {
+               type: mongoose.Schema.Types.ObjectId,
+               ref: "Chat",
+               required: true,
+           },
+       },
+       {
+           timestamps: true,
+       }
+   );
+
+   const Message = mongoose.model("Message", MessageModel);
+
+    module.exports = Message;
+   ```
+
+
+    ```
+## Schema Details
+
+- `sender`: The user who sent the message (reference to the User model).
+- `content`: The content of the message.
+- `chat`: The chat where the message belongs (reference to the Chat model).
+
+````
