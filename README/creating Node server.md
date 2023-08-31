@@ -29,3 +29,8 @@ res.send(singleChat);
 });
 
 ```
+
+10. Created .env file is a configuration file used to store environment variables for a project.
+11. Installed `dotenv` a popular Node.js library that simplifies the process of loading environment variables from a .env file into your application's process environment.  
+    `sh
+npm i dotenv`
