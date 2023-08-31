@@ -1,8 +1,8 @@
-### adding google font
+### 1.Added google font
 
 [google fonts obtained from] (https://fonts.google.com/specimen/Work+Sans)
 
-### added Chakra-UI components
+### 2.Added Chakra-UI components
 
 [chakra-ui reference here](https://chakra-ui.com/getting-started)
 
@@ -12,8 +12,8 @@
   The Box component is a versatile and fundamental building block that serves as a wrapper for styling and positioning elements. It is used for creating layout structures, applying styling, and managing spacing and positioning of content within your components. Essentially, the Box component is a lightweight and flexible container that allows you to apply various styling properties without adding any additional semantic elements to the DOM.
 
 - applied styles to Boxes
-- First Box is for the name, second Box is for Login and SignUp components, [added Tabs to second Box](https://chakra-ui.com/docs/components/tabs/usage)
+- First Box is for the name, second Box is for Login and SignUp components, added Tabs to second Box[Tabs chakra-ui](https://chakra-ui.com/docs/components/tabs/usage)
 
-#### added VStack from chakra-ui for additional fields
+### 3.Added VStack from chakra-ui for additional fields
 
-[VStack](https://chakra-ui.com/docs/components/stack/usage)
+[VStack chakra-ui](https://chakra-ui.com/docs/components/stack/usage)
