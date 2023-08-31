@@ -63,9 +63,21 @@ Understand the differences between [SQL and NoSQL](https://www.mongodb.com/nosql
 
 ![MERN Stack Diagram](./client/src/mern.png)
 
-## Getting Started
+## Steps taken
 
-To set up your environment and start building with the MERN Stack, follow these guides:
+I tried to document every step of this project , I hope i did not miss anything but it is quite possible.
+I tried to leave links to useful websites and put detailed explanation of the steps I've taken to complete this project.
+If I missed something , feel free to add or correct by contributing.
 
-- [Set up Environment](./README/SetupEnvironment.md)
-- [Creating a Node Server](./README/creating%20Node%20server.md)
+| Guide                                                                                                  | Description                            |
+| ------------------------------------------------------------------------------------------------------ | -------------------------------------- |
+| [Set up Environment](./README/SetupEnvironment.md)                                                     | Configure your development environment |
+| [Creating a Node Server](./README/creating%20Node%20server.md)                                         | Set up a Node.js server                |
+| [Creating Frontend.md](./README/creating%20Frontend.md)                                                | Create the frontend using React        |
+| [Building SignUp Client side](./README/BuildingSignUp.md)                                              | Build the sign-up functionality        |
+| [Building Login Client side](./README/BuildingLogin.md)                                                | Implement the login functionality      |
+| [Creating DB connection](./README/creating%20DB.md)                                                    | Establish a connection to the database |
+| [User Authentication and Error Handling](./README/UserAuthentication.md)                               | Secure user authentication             |
+| [Creating Functionality for Sign Up Client side](./README/CreatingFunctionalityForSignUpClientSide.md) | Enhance the sign-up functionality      |
+
+## I hope these guides will help you step-by-step in setting up your MERN Stack project, building user authentication, and handling errors efficiently.
