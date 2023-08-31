@@ -1,0 +1,31 @@
+1.  npm init
+2.  npm i express
+3.  create backend folder
+4.  in backend folder create file server.js
+5.  in server.js import express `const express = require("express")` and ` const app = express()`
+6.  then create app.listen `app.listen(5000, console.log("Server Started on PORT 5000"));`
+7.  in package.json create custom run command, under scripts `"start": "node backend/server.js"`
+8.  create `app.get("/", (req, res) => {
+  res.send("API is running....");
+});`
+
+9.  create data folder and then `data.js` file inside of it we will store Dummy data to practice api calls
+
+        ```js
+        app.get("/api/chat", (req, res) => {
+
+    res.status(200).json({ success: true, chats });
+    });
+
+    ```
+
+    ```
+
+```js
+app.get("/api/chat/:id", (req, res) => {
+// console.log(req.params.id);
+const singleChat = chats.find((c) => c.\_id === req.params.id);
+res.send(singleChat);
+});
+
+```

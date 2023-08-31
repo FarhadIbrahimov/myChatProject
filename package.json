@@ -1,0 +1,14 @@
+{
+  "name": "chatio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "author": "Farhad Ibrahimov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
