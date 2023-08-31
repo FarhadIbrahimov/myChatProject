@@ -1,5 +1,15 @@
 # MERN Stack Overview
 
+- [Introduction](#introduction)
+- [React.js](#reactjs)
+- [Node.js](#nodejs)
+- [Express.js](#expressjs)
+- [MongoDB](#mongodb)
+- [MERN Stack Diagram](#mern-stack-diagram)
+- [Getting Started](#getting-started)
+
+## Introduction
+
 The MERN Stack is a combination of technologies used for building web applications. It includes:
 
 - **MongoDB**: Database management system.
@@ -51,7 +61,7 @@ Understand the differences between [SQL and NoSQL](https://www.mongodb.com/nosql
 
 ## MERN Stack Diagram
 
-![MERN Stack Diagram](./images/mern.png)
+![MERN Stack Diagram](../images/mern.png)
 
 ## Getting Started
 
