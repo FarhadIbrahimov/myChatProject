@@ -1,6 +1,6 @@
 ### 1.Added google font
 
-[google fonts obtained from] (https://fonts.google.com/specimen/Work+Sans)
+[google fonts link here](https://fonts.google.com/specimen/Work+Sans)
 
 ### 2.Added Chakra-UI components
 
