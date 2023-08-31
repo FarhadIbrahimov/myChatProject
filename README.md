@@ -61,7 +61,7 @@ Understand the differences between [SQL and NoSQL](https://www.mongodb.com/nosql
 
 ## MERN Stack Diagram
 
-![MERN Stack Diagram](./images/mern.png)
+![MERN Stack Diagram](./client/src/mern.png)
 
 ## Getting Started
 
