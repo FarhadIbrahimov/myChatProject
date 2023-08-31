@@ -85,3 +85,40 @@ module.exports = Message;
 - `sender`: The user who sent the message (reference to the User model).
 - `content`: The content of the message.
 - `chat`: The chat where the message belongs (reference to the Chat model).
+
+## Creating User Schema
+
+```javascript
+const UserSchema = mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: true,
+    },
+    email: {
+      type: String,
+      required: true,
+    },
+    password: {
+      type: String,
+      required: true,
+    },
+    pic: {
+      type: String,
+      required: true,
+      default:
+        "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+    },
+  },
+  { timestamps: true }
+);
+const User = mongoose.model("User", UserSchema);
+module.exports = User;
+```
+
+## Schema Details
+
+- `name`: The user's name.
+- `email`: The user's email (used for authentication).
+- `password`: The user's password (hashed for security).
+- `pic`: The default URL of the user's profile picture if User did not upload any picture.
