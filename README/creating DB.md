@@ -116,7 +116,7 @@ const User = mongoose.model("User", UserSchema);
 module.exports = User;
 ```
 
-## Schema Details
+### Schema Details
 
 - `name`: The user's name.
 - `email`: The user's email (used for authentication).
