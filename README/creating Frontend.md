@@ -39,3 +39,5 @@ export default App;
 ```
 
 By using the exact prop on the home page route, you ensure that it matches only when the URL path is exactly /. This prevents unexpected behavior where multiple components could render due to similar path prefixes.
+
+6. added proxy to `vite.config.js` file to connect to backend using axios that was installed to client folder by entering command `npm i axios`
