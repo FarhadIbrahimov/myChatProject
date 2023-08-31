@@ -1,0 +1,5 @@
+1. installed vite [to install vite follow the instructions on Vite website](https://vitejs.dev/guide/)
+2. install chackra ui [to install chackra ui follow the insructions on chackra-ui website ](https://chakra-ui.com/getting-started)
+   Chakra UI is a simple, modular and accessible component library that gives you the building blocks you need to build your React applications. (https://chakra-ui.com/)
+3. install react-router-dom `npm i react-router-dom`
+4. imported BrowserRouter from react-router-dom

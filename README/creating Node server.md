@@ -3,8 +3,8 @@
 3.  create backend folder
 4.  in backend folder create file server.js
 5.  in server.js import express `const express = require("express")` and ` const app = express()`
-6.  then create app.listen `app.listen(5000, console.log("Server Started on PORT 5000"));`
-7.  in package.json create custom run command, under scripts `"start": "node backend/server.js"`
+6.  install nodemon globally( so server restarts automatically after each change ) by running command `npm install --global nodemon`, then create app.listen `app.listen(5000, console.log("Server Started on PORT 5000"));`
+7.  in package.json create custom run command, under scripts `"start": "nodemon backend/server.js"`
 8.  create `app.get("/", (req, res) => {
   res.send("API is running....");
 });`
@@ -32,5 +32,5 @@ res.send(singleChat);
 
 10. Created .env file is a configuration file used to store environment variables for a project.
 11. Installed `dotenv` a popular Node.js library that simplifies the process of loading environment variables from a .env file into your application's process environment.  
-    `sh
+     `sh
 npm i dotenv`
