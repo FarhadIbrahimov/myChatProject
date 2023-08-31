@@ -52,40 +52,36 @@ const chatModel = mongoose.Schema(
 
 ## Creating Message Schema
 
-````javascript
-   const MessageSchema = mongoose.Schema(
-       {
-           sender: {
-               type: mongoose.Schema.Types.ObjectId,
-               ref: "User",
-               required: true,
-           },
-           content: {
-               type: String,
-               trim: true,
-           },
-           chat: {
-               type: mongoose.Schema.Types.ObjectId,
-               ref: "Chat",
-               required: true,
-           },
-       },
-       {
-           timestamps: true,
-       }
-   );
+```javascript
+const MessageSchema = mongoose.Schema(
+  {
+    sender: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    content: {
+      type: String,
+      trim: true,
+    },
+    chat: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Chat",
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
 
-   const Message = mongoose.model("Message", MessageModel);
+const Message = mongoose.model("Message", MessageModel);
 
-    module.exports = Message;
-   ```
+module.exports = Message;
+```
 
-
-    ```
 ## Schema Details
 
 - `sender`: The user who sent the message (reference to the User model).
 - `content`: The content of the message.
 - `chat`: The chat where the message belongs (reference to the Chat model).
-
-````
