@@ -68,3 +68,26 @@ import { FormControl, FormLabel } from "@chakra-ui/form-control";
   </InputGroup>
 </FormControl>
 ```
+
+### Added field to upload the image
+
+```js
+<FormControl id="pic">
+  <FormLabel mt="5">Upload your Picture</FormLabel>
+  <Input
+    type="file"
+    p={1.5}
+    accept="image/*"
+    placeholder="image/*"
+    onChange={(e) => postDetails(e.target.files[0])}
+  />
+</FormControl>
+```
+
+- type is file, accepts only files
+- in `onChange` we are calling function `postDetails` that will accept 1st element of our input, it is going to take only one image
+- created `postDetails` function right after handleClick , assigned params `pics`
+
+### Added Sign Up Button at the botom
+
+- added onClick with submitHandler function that is created right after postDetails function
