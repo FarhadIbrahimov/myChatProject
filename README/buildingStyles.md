@@ -39,3 +39,32 @@ import { VStack } from "@chakra-ui/react";
 import { Input } from "@chakra-ui/input";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 ```
+
+- after creating input fields for name, email, password, added InputGroup element from Chakra.
+  In Chakra UI, InputGroup is a component that provides a way to group related input elements together, such as an input field with an associated button or icon.
+
+  -added Show/Hide button to Password Input field using InputRightElement component from Chakra , added handleClick to Button inside the password field that will give the option to show or hide the password. Added condition to type atribute in password input to show or hide text
+
+  ```js
+  const handleCLick = () => setShow(!show);
+  ```
+
+  then
+
+```js
+<FormControl id="password" isRequired>
+  <FormLabel mt="5">Password</FormLabel>
+  <InputGroup>
+    <Input
+      type={show ? "text" : "password"}
+      placeholder="Enter Your Password"
+      onChange={(e) => setPassword(e.target.value)}
+    />
+    <InputRightElement>
+      <Button h="1.85rem" size="sm" mr="1" onClick={handleCLick}>
+        {show ? "Hide" : "Show"}
+      </Button>
+    </InputRightElement>
+  </InputGroup>
+</FormControl>
+```
