@@ -3,15 +3,11 @@ import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
 import { FormControl, FormLabel } from "@chakra-ui/form-control";
 import { useState } from "react";
 
-let emptyForm = {
-  email: "",
-  password: "",
-};
 function Login() {
   const [show, setShow] = useState(false);
 
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleClick = () => setShow(!show);
 
