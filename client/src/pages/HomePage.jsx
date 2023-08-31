@@ -24,7 +24,12 @@ const HomePage = () => {
         borderRadius="md"
         borderWidth="1px"
       >
-        <Text fontSize="4xl" fontFamily="Work Sans" color="black">
+        <Text
+          fontSize="4xl"
+          fontFamily="Work Sans"
+          color="black"
+          fontWeight="bold"
+        >
           CHATIO
         </Text>
       </Box>
@@ -38,8 +43,12 @@ const HomePage = () => {
       >
         <Tabs variant="soft-rounded">
           <TabList mb="1em">
-            <Tab width="50%">Login</Tab>
-            <Tab width="50%">Sign Up</Tab>
+            <Tab width="50%" fontWeight="bold">
+              Login
+            </Tab>
+            <Tab width="50%" fontWeight="bold">
+              Sign Up
+            </Tab>
           </TabList>
           <TabPanels>
             <TabPanel>

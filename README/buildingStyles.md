@@ -13,3 +13,7 @@
 
 - applied styles to Boxes
 - First Box is for the name, second Box is for Login and SignUp components, [added Tabs to second Box](https://chakra-ui.com/docs/components/tabs/usage)
+
+#### added VStack from chakra-ui for additional fields
+
+[VStack](https://chakra-ui.com/docs/components/stack/usage)
