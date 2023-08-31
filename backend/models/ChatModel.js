@@ -25,8 +25,6 @@ const chatModel = mongoose.Schema(
   }
 );
 
-//chatName
-//isGroupChat
-//users
-//latestMessage
-//groupAdmin
+const Chat = mongoose.model("Chat", ChatModel);
+
+module.exports = Chat;
