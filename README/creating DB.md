@@ -80,7 +80,7 @@ const Message = mongoose.model("Message", MessageModel);
 module.exports = Message;
 ```
 
-## Schema Details
+### Schema Details
 
 - `sender`: The user who sent the message (reference to the User model).
 - `content`: The content of the message.
