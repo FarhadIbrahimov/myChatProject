@@ -1,5 +1,7 @@
 # User Authentication and Error Handling in Express.js
 
+:warning: **Warning:** Always store your sensitive information in .env file and include it into .gitinore file
+
 ## Overview
 
 This README provides an overview of the implementation of user authentication and error handling in an Express.js application. It covers topics such as password hashing, error middleware, and the use of `express-async-handler` for asynchronous route handling.
@@ -22,9 +24,13 @@ To begin, set up the necessary dependencies:
 - Install `jsonwebtoken` to enable user authorization.
 - Install `bcryptjs` for secure password hashing.
 
+:memo: **Note:** ==The express-async-handler is a popular middleware library for Express.js that simplifies error handling in asynchronous route handlers. It helps you avoid writing try-catch blocks in each of your route handlers by abstracting away the error handling logic.==
+
 ```bash
 npm install express-async-handler jsonwebtoken bcryptjs
 ```
+
+[express-async-handler documentation](https://www.npmjs.com/package/express-async-handler)
 
 ### Password Hashing
 

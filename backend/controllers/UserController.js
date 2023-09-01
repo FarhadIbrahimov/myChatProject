@@ -70,8 +70,5 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-// Export the authUser function for use in other parts of the application
-module.exports = authUser;
-
 // Export the registerUser function for use in other parts of the application
 module.exports = { registerUser, authUser };
