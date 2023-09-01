@@ -1,6 +1,6 @@
 // Import the necessary modules and dependencies
 const asyncHandler = require("express-async-handler");
-const User = require("../models/UserModel"); // Import the User model
+const User = require("../models/UserModel");
 const generateToken = require("../config/generateToken"); // Import a function to generate tokens
 
 // Define a function that handles user registration
@@ -11,14 +11,14 @@ const registerUser = asyncHandler(async (req, res) => {
   // Check if required fields are missing
   if (!name || !email || !password) {
     res.status(400);
-    throw new Error("Please Enter all the fields"); // Throw an error if fields are missing
+    throw new Error("Please Enter all the fields");
   }
 
   // Check if a user with the same email already exists
   const userExist = await User.findOne({ email });
   if (userExist) {
     res.status(400);
-    throw new Error("User already exists"); // Throw an error if user already exists
+    throw new Error("User already exists");
   }
 
   // Create a new user record in the database
@@ -55,7 +55,7 @@ const authUser = asyncHandler(async (req, res) => {
 
   if (user && (await user.matchPassword(password))) {
     // If the user exists, respond with user details and a token
-    res.status(201); // Set the response status code to "Created"
+    res.status(201);
     res.json({
       _id: user.id, // User's unique ID
       name: user.name,
@@ -64,11 +64,23 @@ const authUser = asyncHandler(async (req, res) => {
       token: generateToken(user._id), // Generate and include a token for authentication
     });
   } else {
-    // If the user doesn't exist or the password is incorrect
-    res.status(401); // Set the response status code to "Unauthorized"
-    throw new Error("Invalid ID or Password"); // Show an error message
+    res.status(401);
+    throw new Error("Invalid ID or Password");
   }
 });
 
-// Export the registerUser function for use in other parts of the application
-module.exports = { registerUser, authUser };
+const allUsers = asyncHandler(async (req, res) => {
+  const keyword = req.query.search
+    ? {
+        $or: [
+          { name: { $regex: req.query.search, $options: "i" } },
+          { email: { $regex: req.query.search, $options: "i" } },
+        ],
+      }
+    : {};
+
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
+  res.send(users);
+});
+
+module.exports = { registerUser, authUser, allUsers };
