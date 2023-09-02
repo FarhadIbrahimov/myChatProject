@@ -3,6 +3,19 @@ const asyncHandler = require("express-async-handler");
 const User = require("../models/UserModel");
 const generateToken = require("../config/generateToken"); // Import a function to generate tokens
 
+const allUsers = asyncHandler(async (req, res) => {
+  const keyword = req.query.search
+    ? {
+        $or: [
+          { name: { $regex: req.query.search, $options: "i" } },
+          { email: { $regex: req.query.search, $options: "i" } },
+        ],
+      }
+    : {};
+
+  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
+  res.send(users);
+});
 // Define a function that handles user registration
 const registerUser = asyncHandler(async (req, res) => {
   // Extract necessary information from the request body
@@ -16,6 +29,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   // Check if a user with the same email already exists
   const userExist = await User.findOne({ email });
+
   if (userExist) {
     res.status(400);
     throw new Error("User already exists");
@@ -69,18 +83,4 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-const allUsers = asyncHandler(async (req, res) => {
-  const keyword = req.query.search
-    ? {
-        $or: [
-          { name: { $regex: req.query.search, $options: "i" } },
-          { email: { $regex: req.query.search, $options: "i" } },
-        ],
-      }
-    : {};
-
-  const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
-  res.send(users);
-});
-
-module.exports = { registerUser, authUser, allUsers };
+module.exports = { allUsers, registerUser, authUser };

@@ -90,6 +90,6 @@ import { FormControl, FormLabel } from "@chakra-ui/form-control";
 - in `onChange` we are calling function `postDetails` that will accept 1st element of our input, it is going to take only one image
 - created `postDetails` function right after handleClick , assigned params `pics`
 
-### Added Sign Up Button at the botom
+### Added Sign Up Button at the bottom
 
 - added onClick with submitHandler function that is created right after postDetails function
