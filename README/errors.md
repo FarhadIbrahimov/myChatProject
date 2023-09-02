@@ -18,7 +18,7 @@ to solve this error all i had to do is just add empty string as shown in code ab
 
 Error: Route.get() requires a callback function but got a [object Undefined]``
 
-the problem was incorrect exporting of a function in authMiddleware.js file, I had it `module.exports =  protect;` instead of `module.exports = { protect };`
+the problem was incorrect exporting of a function in authMiddleware.js file, I had it `module.exports =  protect;` instead of `module.exports = { protect };` :bowtie: :bowtie: :bowtie:
 
 3. ### :weary: Error 3 :confounded: :cry:
 
@@ -48,3 +48,5 @@ app.use("/api/chat", chatRoutes);
 app.use(notFound);
 app.use(errorHandler);
 ```
+
+:see_no_evil: :hear_no_evil: :speak_no_evil:

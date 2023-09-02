@@ -1,4 +1,4 @@
-#### Regustered on Cloudinary
+#### Registered on Cloudinary
 
 Using Cloudinary to enable picture uploading
 
