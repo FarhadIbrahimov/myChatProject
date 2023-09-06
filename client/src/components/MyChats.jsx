@@ -5,6 +5,7 @@ import axios from "axios";
 import { AddIcon } from "@chakra-ui/icons";
 import ChatLoading from "./ChatLoading";
 import { getSender } from "../config/ChatLogics";
+import GroupChatModal from "./miscellaneous/GroupChatModal";
 
 const MyChats = () => {
   const [loggedUser, setLoggedUser] = useState();
@@ -62,20 +63,21 @@ const MyChats = () => {
         w="100%"
         justifyContent="space-between"
       >
-        <Text mb={{ base: 2, md: 0 }}>My Chats</Text>{" "}
-        {/* mb for margin-bottom */}
-        <Button
-          fontSize={{ base: "14px", md: "20px" }}
-          rightIcon={<AddIcon />}
-          mt={{ base: 2, md: 0 }}
-          width={{ base: "100%", md: "auto" }} // Allow button to take full width on small screens, auto width on larger screens
-          maxW="80%"
-          overflow="hidden"
-          whiteSpace="nowrap"
-          textOverflow={"ellipsis"}
-        >
-          New Group Chat
-        </Button>
+        <Text mb={{ base: 2, md: 0 }}>My Chats</Text>
+        <GroupChatModal>
+          <Button
+            fontSize={{ base: "14px", md: "20px" }}
+            rightIcon={<AddIcon />}
+            mt={{ base: 2, md: 0 }}
+            width={{ base: "100%", md: "auto" }} // Allow button to take full width on small screens, auto width on larger screens
+            maxW="80%"
+            overflow="hidden"
+            whiteSpace="nowrap"
+            textOverflow={"ellipsis"}
+          >
+            New Group Chat
+          </Button>
+        </GroupChatModal>
       </Box>
 
       <Box
