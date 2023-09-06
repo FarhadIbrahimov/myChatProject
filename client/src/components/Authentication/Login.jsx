@@ -32,7 +32,8 @@ function Login() {
       setLoading(false);
       return;
     }
-
+    // Check if the email and password match the guest user credentials
+    const isGuestUser = email === "guest@example.com" && password === "123456";
     try {
       const config = {
         headers: {
@@ -40,11 +41,26 @@ function Login() {
         },
       };
 
-      const { data } = await axios.post(
-        "/api/user/login",
-        { email, password },
-        config
-      );
+      let data;
+
+      if (isGuestUser) {
+        // Simulate a successful login for the guest user
+        data = {
+          _id: "guestUserId",
+          name: "Guest User",
+          email: "guest@example.com",
+          pic: "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
+          token: "guestUserToken",
+        };
+      } else {
+        // Perform a regular login
+        const response = await axios.post(
+          "/api/user/login",
+          { email, password },
+          config
+        );
+        data = response.data;
+      }
 
       toast({
         title: "Login Successful!",

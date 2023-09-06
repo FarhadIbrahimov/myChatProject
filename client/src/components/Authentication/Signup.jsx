@@ -6,6 +6,7 @@ import { useToast } from "@chakra-ui/toast";
 import axios from "axios";
 import { useState } from "react";
 import { useHistory } from "react-router";
+import { ChatState } from "../../Context/ChatProvider";
 
 const Signup = () => {
   const [show, setShow] = useState(false);
@@ -15,16 +16,17 @@ const Signup = () => {
 
   const [name, setName] = useState();
   const [email, setEmail] = useState();
-  const [confirmpassword, setConfirmpassword] = useState();
+  const [confirmPassword, setConfirmPassword] = useState();
   const [password, setPassword] = useState();
   const [pic, setPic] = useState();
   const [picLoading, setPicLoading] = useState(false);
+  const { setUser } = ChatState();
 
   const submitHandler = async () => {
     setPicLoading(true);
-    if (!name || !email || !password || !confirmpassword) {
+    if (!name || !email || !password || !confirmPassword) {
       toast({
-        title: "Please Fill all the Feilds",
+        title: "Please Fill all the Fields",
         status: "warning",
         duration: 5000,
         isClosable: true,
@@ -33,7 +35,7 @@ const Signup = () => {
       setPicLoading(false);
       return;
     }
-    if (password !== confirmpassword) {
+    if (password !== confirmPassword) {
       toast({
         title: "Passwords Do Not Match",
         status: "warning",
@@ -68,6 +70,7 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
+      setUser(data);
       localStorage.setItem("userInfo", JSON.stringify(data));
       setPicLoading(false);
       history.push("/chats");
@@ -86,7 +89,7 @@ const Signup = () => {
 
   const postDetails = (pics) => {
     setPicLoading(true);
-    if (pics === undefined) {
+    if (!pics) {
       toast({
         title: "Please Select an Image!",
         status: "warning",
@@ -94,9 +97,11 @@ const Signup = () => {
         isClosable: true,
         position: "bottom",
       });
+      setPicLoading(false);
       return;
     }
-    console.log(pics);
+
+    // Ensure that pics is a valid file
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       const data = new FormData();
       data.append("file", pics);
@@ -115,14 +120,13 @@ const Signup = () => {
         });
     } else {
       toast({
-        title: "Please Select an Image!",
+        title: "Please Select a Valid Image (JPEG or PNG)!",
         status: "warning",
         duration: 5000,
         isClosable: true,
         position: "bottom",
       });
       setPicLoading(false);
-      return;
     }
   };
 
@@ -164,7 +168,7 @@ const Signup = () => {
           <Input
             type={show ? "text" : "password"}
             placeholder="Confirm password"
-            onChange={(e) => setConfirmpassword(e.target.value)}
+            onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <InputRightElement width="4.5rem">
             <Button h="1.75rem" size="sm" onClick={handleClick}>
