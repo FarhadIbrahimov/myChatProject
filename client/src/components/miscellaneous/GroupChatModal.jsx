@@ -13,9 +13,11 @@ import {
   useToast,
   FormControl,
   Input,
+  Box,
 } from "@chakra-ui/react";
 import { ChatState } from "../../Context/ChatProvider";
 import axios from "axios";
+import UserBadgeItem from "../UserAvatar/UserBadgeItem";
 
 function GroupChatModal({ children }) {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -57,8 +59,19 @@ function GroupChatModal({ children }) {
     }
   };
   const handleSubmit = async (query) => {};
-  const handleGroup = async (query) => {};
-
+  const handleGroup = (userToAdd) => {
+    if (selectedUsers.includes(userToAdd)) {
+      toast({
+        title: "User already added",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
+      return;
+    }
+    setSelectedUsers([...selectedUsers, userToAdd]);
+  };
   return (
     <>
       <span onClick={onOpen}>{children}</span>
@@ -90,6 +103,15 @@ function GroupChatModal({ children }) {
                 onChange={(e) => handleSearch(e.target.value)}
               />
             </FormControl>
+            <Box w="100%" d="flex" flexWrap="wrap">
+              {selectedUsers.map((u) => (
+                <UserBadgeItem
+                  key={u._id}
+                  user={u}
+                  handleFunction={() => handleDelete(u)}
+                />
+              ))}
+            </Box>
             {loading ? (
               // <ChatLoading />
               <div>Loading...</div>
