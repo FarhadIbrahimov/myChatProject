@@ -42,7 +42,7 @@ const MyChats = () => {
 
   return (
     <Box
-      d={{ base: selectedChat ? "none" : "flex", md: "flex" }}
+      display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
       flexDir="column"
       alignItems="center"
       p={3}
@@ -56,7 +56,7 @@ const MyChats = () => {
         px={3}
         fontSize={{ base: "28px", md: "30px" }}
         fontFamily="Work sans"
-        d="flex"
+        display="flex"
         w="100%"
         justifyContent="space-between"
         alignItems="center"
@@ -64,7 +64,7 @@ const MyChats = () => {
         My Chats
         <GroupChatModal>
           <Button
-            d="flex"
+            display="flex"
             fontSize={{ base: "17px", md: "10px", lg: "17px" }}
             rightIcon={<AddIcon />}
           >
@@ -73,7 +73,7 @@ const MyChats = () => {
         </GroupChatModal>
       </Box>
       <Box
-        d="flex"
+        display="flex"
         flexDir="column"
         p={3}
         bg="#F8F8F8"
@@ -100,14 +100,6 @@ const MyChats = () => {
                     ? getSender(loggedUser, chat.users)
                     : chat.chatName}
                 </Text>
-                {/* {chat.latestMessage && (
-                    <Text fontSize="xs">
-                      <b>{chat.latestMessage.sender.name} : </b>
-                      {chat.latestMessage.content.length > 50
-                        ? chat.latestMessage.content.substring(0, 51) + "..."
-                        : chat.latestMessage.content}
-                    </Text>
-                  )} */}
               </Box>
             ))}
           </Stack>
