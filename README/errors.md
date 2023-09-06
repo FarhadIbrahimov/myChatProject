@@ -50,3 +50,5 @@ app.use(errorHandler);
 ```
 
 :see_no_evil: :hear_no_evil: :speak_no_evil:
+
+SearchUser bar if i type in m it renders all the users

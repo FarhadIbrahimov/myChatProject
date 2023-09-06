@@ -1,4 +1,3 @@
-import { ChatState } from "../../Context/ChatProvider";
 import { Avatar, Box, Text } from "@chakra-ui/react";
 
 function UserLIstItem({ user, handleFunction }) {
@@ -27,7 +26,7 @@ function UserLIstItem({ user, handleFunction }) {
       <Box>
         <Text>{user.name}</Text>
         <Text fontSize="xs">
-          <b>Emailt : </b>
+          <b>Email : </b>
           {user.email}
         </Text>
       </Box>
