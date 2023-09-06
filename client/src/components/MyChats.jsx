@@ -60,6 +60,7 @@ const MyChats = ({ fetchAgain }) => {
         w="100%"
         justifyContent="space-between"
         alignItems="center"
+        color="gray.500"
       >
         My Chats
         <GroupChatModal>
