@@ -20,6 +20,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             display="flex"
             justifyContent={{ base: "space-between" }}
             alignItems="center"
+            color="gray.500"
           >
             <IconButton
               display={{ base: "flex", md: "none" }}
@@ -35,6 +36,19 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
               <>{selectedChat.chatName.toUpperCase()}</>
             )}
           </Text>
+          <Box
+            display="flex"
+            flexDir="column"
+            justifyContent="flex-end"
+            p={3}
+            bg="#E8E8E8"
+            w="100%"
+            h="100%"
+            borderRadius="lg"
+            overflowY="hidden"
+          >
+            {/* Messages Here */}
+          </Box>
         </>
       ) : (
         <Box
