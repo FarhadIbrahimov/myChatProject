@@ -51,6 +51,7 @@ const MyChats = () => {
       w={{ base: "100%", md: "31%" }}
       borderRadius="lg"
       borderWidth="1px"
+      maxW="400px" // Set a maximum width for the My Chats box
     >
       <Box
         pb={3}
@@ -63,19 +64,18 @@ const MyChats = () => {
         w="100%"
         justifyContent="space-between"
       >
-        <Text mb={{ base: 2, md: 0 }}>My Chats</Text>
+        <Text mb={{ base: 2, md: "auto" }}>My Chats</Text>
         <GroupChatModal>
           <Button
             fontSize={{ base: "14px", md: "20px" }}
             rightIcon={<AddIcon />}
             mt={{ base: 2, md: 0 }}
-            width={{ base: "100%", md: "auto" }} // Allow button to take full width on small screens, auto width on larger screens
-            maxW="80%"
+            width={{ base: "100%", md: "auto" }}
             overflow="hidden"
             whiteSpace="nowrap"
-            textOverflow={"ellipsis"}
+            alignSelf={{ base: "flex-start", md: "center" }}
           >
-            New Group Chat
+            <Text mb={{ base: 2, md: "auto" }}> New Group Chat</Text>
           </Button>
         </GroupChatModal>
       </Box>

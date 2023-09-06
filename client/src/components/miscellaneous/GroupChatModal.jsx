@@ -58,7 +58,10 @@ function GroupChatModal({ children }) {
       });
     }
   };
-  const handleSubmit = async (query) => {};
+  const handleSubmit = async () => {};
+  const handleDelete = async (delUser) => {
+    setSelectedUsers(selectedUsers.filter((sel) => sel._id !== delUser._id));
+  };
   const handleGroup = (userToAdd) => {
     if (selectedUsers.includes(userToAdd)) {
       toast({
