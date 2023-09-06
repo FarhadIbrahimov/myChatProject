@@ -51,4 +51,8 @@ app.use(errorHandler);
 
 :see_no_evil: :hear_no_evil: :speak_no_evil:
 
-SearchUser bar if i type in m it renders all the users
+##### SearchUser bar if i type in m it renders all the users
+
+##### when chat is being created it is loading animation for it
+
+##### when creating GroupChat, then if adding another user to My Chats from search User input, receive an error of duplicate keys , if different user no errors
