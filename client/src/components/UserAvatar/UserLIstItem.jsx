@@ -1,6 +1,6 @@
 import { Avatar, Box, Text } from "@chakra-ui/react";
 
-function UserLIstItem({ user, handleFunction }) {
+function UserListItem({ user, handleFunction }) {
   return (
     <Box
       onClick={handleFunction}
@@ -34,4 +34,4 @@ function UserLIstItem({ user, handleFunction }) {
   );
 }
 
-export default UserLIstItem;
+export default UserListItem;
