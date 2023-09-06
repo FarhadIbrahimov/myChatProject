@@ -50,3 +50,18 @@ Working on SideDrawer.jsx
 [Icons from Chakra-UI](https://chakra-ui.com/docs/components/icon/usage)
 
 #### issue with the Bell Icon, initially i wanted to change the fontSize when i hover over it, but instead it does not transition
+
+```js
+if (!chats.find((c) => (c._id === data._id) === data._id))
+  setChats([...chats, data]);
+```
+
+      if it finds chats inside the list that is already exists then it is going to update the list
+
+```js
+{
+  loading && <Spinner ml="auto" display="flex" />;
+}
+```
+
+when chat is being created it is loading animation for it
