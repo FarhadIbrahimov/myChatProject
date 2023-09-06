@@ -3,6 +3,7 @@ import { ChatState } from "../Context/ChatProvider";
 import { Box, IconButton, Text } from "@chakra-ui/react";
 import { getSender, getSenderFull } from "../config/ChatLogics";
 import ProfileModal from "./miscellaneous/ProfileModal";
+import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const { user, selectedChat, setSelectedChat } = ChatState();
@@ -33,7 +34,14 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 <ProfileModal user={getSenderFull(user, selectedChat.users)} />
               </>
             ) : (
-              <>{selectedChat.chatName.toUpperCase()}</>
+              <>
+                {selectedChat.chatName.toUpperCase()}
+                <UpdateGroupChatModal
+                  //   fetchMessages={fetchMessages}
+                  fetchAgain={fetchAgain}
+                  setFetchAgain={setFetchAgain}
+                />
+              </>
             )}
           </Text>
           <Box
