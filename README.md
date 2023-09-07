@@ -85,7 +85,9 @@ If I missed something , feel free to add or correct by contributing.
 
 ## _Project Management Tool Used is Azure Boards, ERD and deployment links_
 
-If you want to check Project Managment tool i used [click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP).
+To keep the development process organized and efficient, I'll be utilizing project management tool such as [**Azure Boards**](https://azure.microsoft.com/en-us/services/devops/boards/) . These tools allow me to track tasks, issues, and progress, ensuring a smooth collaboration and development experience.
+
+If you want to check Project Management tool i used [click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP).
 
 ### Entity-Relationship Diagram (ERD)
 
