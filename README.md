@@ -85,12 +85,14 @@ If I missed something , feel free to add or correct by contributing.
 
 ## _Project Management Tool Used is Azure Boards, ERD and deployment links_
 
-If you want to check it out [Click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP)
+If you want to check it out, [click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP).
 
-My ERD could be viewed [here](./public/documents/ERD.pdf)
+### Entity-Relationship Diagram (ERD)
 
-Deployment links
+You can view my ERD [here](./public/documents/ERD.pdf).
 
-[Vercel](https://my-chat-project-764z.vercel.app/)
-[Render](https://chatio-nryo.onrender.com)
-[Netlify](https://meek-pothos-253fc5.netlify.app)
+### Deployment Links
+
+- Vercel: [https://my-chat-project-764z.vercel.app/](https://my-chat-project-764z.vercel.app/)
+- Render: [https://chatio-nryo.onrender.com](https://chatio-nryo.onrender.com)
+- Netlify: [https://meek-pothos-253fc5.netlify.app](https://meek-pothos-253fc5.netlify.app)
