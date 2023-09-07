@@ -85,4 +85,6 @@ If I missed something , feel free to add or correct by contributing.
 
 ### Project Management Tool Used is Azure Boards
 
-If you want to check it out [Cick Here](https://dev.azure.com/farhadibrahimov/CHAT%20APP)
+If you want to check it out [Click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP)
+
+My ERD could be viewed [here](./public/documents/ERD.pdf)
