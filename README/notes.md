@@ -24,16 +24,14 @@ component provides a clean and user-friendly way to view a user's profile detail
 $${\color{orange}SideDrawer}$$
 component provides essential functionality for user search, chat access, and user profile actions within a side drawer menu. It enhances the user experience of your application by allowing users to interact with various features from a convenient side menu.
 
-$${\color{orange}ChatLogic}$$
-$${\color{purple}getSender}$$ returns the name of the sender who is not the logged-in user in a conversation.
-$${\color{purple}getSenderFull}$$ returns the full user object of the sender who is not the logged-in user in a conversation.
-These functions are used in my application to display the sender's name or information in a chat or messaging context based on the logged-in user and the participants of the conversation.
-
 $${\color{orange}UpdateGroupChatModal}$$
 is a versatile component that allows users to manage group chats by renaming them, adding or removing users, and leaving the group. It also provides a user-friendly interface for these operations with error handling and loading indicators for a smoother user experience.
 
 $${\color{orange}UserListItem}$$
 component is a reusable component that is used to display user information within a list. It provides a clickable interface with Chakra UI styling and takes advantage of the Avatar component for displaying user avatars. The `handleFunction` prop allows you to specify a function to be executed when a user clicks on a list item, making it versatile for different use cases in a React application.
+
+$${\color{orange}UserBadgeItem}$$
+component is designed to represent a user with their name and an optional "Admin" indicator. It is styled as a badge and used in various contexts, such as displaying a list of users with their roles or permissions. The handleFunction prop allows you to specify a function to be executed when a user clicks on the badge, making it versatile for different use cases in a React application.
 
 $${\color{orange}ChatProvider}$$
 this code sets up a context provider for managing chat-related state, including user information, selected chats, and chat conversations. The context provider ensures that this state is accessible to any component within its descendant tree that wants to consume it using the ChatState function. This pattern is commonly used in React applications to manage and share global state across different components.
@@ -46,3 +44,8 @@ This component wraps its children with the ChatContext.Provider. It provides the
 
 $${\color{purple}ChatState Function}$$
 This function is used to consume the ChatContext and retrieve the chat-related state and functions. It uses the useContext hook to access the context and return its value.
+
+$${\color{orange}ChatLogic}$$
+$${\color{purple}getSender}$$ returns the name of the sender who is not the logged-in user in a conversation.
+$${\color{purple}getSenderFull}$$ returns the full user object of the sender who is not the logged-in user in a conversation.
+These functions are used in my application to display the sender's name or information in a chat or messaging context based on the logged-in user and the participants of the conversation.
