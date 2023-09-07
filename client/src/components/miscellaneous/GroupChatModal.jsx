@@ -1,5 +1,5 @@
 import { useState } from "react";
-import UserListItem from "../UserAvatar/UserListItem";
+import UserListItem from "./UserListItem";
 import {
   useDisclosure,
   Modal,
