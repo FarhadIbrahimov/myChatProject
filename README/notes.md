@@ -1,6 +1,5 @@
-````diff
-! ChatBox
-```component is responsible for rendering a chat interface when a chat is selected. It relies on the selectedChat state from the ChatState context and uses the Chakra UI library for styling. The exact functionality related to fetchAgain and setFetchAgain
+$${\color{ChatBox}Green}$$
+component is responsible for rendering a chat interface when a chat is selected. It relies on the selectedChat state from the ChatState context and uses the Chakra UI library for styling. The exact functionality related to fetchAgain and setFetchAgain
 
 ChatPage component sets up the structure of the chat page, conditionally rendering components based on the presence of a user and passing necessary props to child components for managing chat-related functionality.
 nside this flex container, it conditionally renders two components:
@@ -22,4 +21,7 @@ ChatLogic
 getSender returns the name of the sender who is not the logged-in user in a conversation.
 getSenderFull returns the full user object of the sender who is not the logged-in user in a conversation.
 These functions are used in my application to display the sender's name or information in a chat or messaging context based on the logged-in user and the participants of the conversation.
-````
+
+```
+
+```
