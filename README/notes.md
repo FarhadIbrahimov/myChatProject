@@ -29,6 +29,14 @@ $${\color{purple}getSender}$$ returns the name of the sender who is not the logg
 $${\color{purple}getSenderFull}$$ returns the full user object of the sender who is not the logged-in user in a conversation.
 These functions are used in my application to display the sender's name or information in a chat or messaging context based on the logged-in user and the participants of the conversation.
 
-```
+$${\color{orange}UpdateGroupChatModal}$$
+is a versatile component that allows users to manage group chats by renaming them, adding or removing users, and leaving the group. It also provides a user-friendly interface for these operations with error handling and loading indicators for a smoother user experience.
 
-```
+$${\color{orange}ChatProvider}$$
+this code sets up a context provider for managing chat-related state, including user information, selected chats, and chat conversations. The context provider ensures that this state is accessible to any component within its descendant tree that wants to consume it using the ChatState function. This pattern is commonly used in React applications to manage and share global state across different components.
+
+$${\color{purple}ChatContext.Provider}$$
+This component wraps its children with the ChatContext.Provider. It provides the chat-related state and functions to its descendants through the context's value prop.
+
+$${\color{purple}ChatState Function}$$
+This function is used to consume the ChatContext and retrieve the chat-related state and functions. It uses the useContext hook to access the context and return its value.
