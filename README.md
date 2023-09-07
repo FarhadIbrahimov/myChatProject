@@ -93,6 +93,9 @@ You can view my ERD [here](./public/documents/ERD.pdf).
 
 ### Deployment Links
 
+- Docker (Not ready yet)
+- Azure (Not ready yet)
+
 - Vercel: [https://my-chat-project-764z.vercel.app/](https://my-chat-project-764z.vercel.app/)
 - Render: [https://chatio-nryo.onrender.com](https://chatio-nryo.onrender.com)
 - Netlify: [https://meek-pothos-253fc5.netlify.app](https://meek-pothos-253fc5.netlify.app)
