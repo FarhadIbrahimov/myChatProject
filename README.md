@@ -101,4 +101,5 @@ You can view my ERD [here](./public/documents/ERD.pdf).
 
 - Vercel: [https://my-chat-project-764z.vercel.app/](https://my-chat-project-764z.vercel.app/)
 - Render: [Render Backend](https://backend-ptqb.onrender.com)
+- Render: [Render Frontend](https://frontend-b1d5.onrender.com)
 - Netlify: [https://meek-pothos-253fc5.netlify.app](https://meek-pothos-253fc5.netlify.app)
