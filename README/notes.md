@@ -33,7 +33,7 @@ $${\color{orange}UpdateGroupChatModal}$$
 is a versatile component that allows users to manage group chats by renaming them, adding or removing users, and leaving the group. It also provides a user-friendly interface for these operations with error handling and loading indicators for a smoother user experience.
 
 $${\color{orange}UserListItem}$$
-component is a reusable component that can be used to display user information within a list. It provides a clickable interface with Chakra UI styling and takes advantage of the Avatar component for displaying user avatars. The handleFunction prop allows you to specify a function to be executed when a user clicks on a list item, making it versatile for different use cases in a React application.
+component is a reusable component that is used to display user information within a list. It provides a clickable interface with Chakra UI styling and takes advantage of the Avatar component for displaying user avatars. The `handleFunction` prop allows you to specify a function to be executed when a user clicks on a list item, making it versatile for different use cases in a React application.
 
 $${\color{orange}ChatProvider}$$
 this code sets up a context provider for managing chat-related state, including user information, selected chats, and chat conversations. The context provider ensures that this state is accessible to any component within its descendant tree that wants to consume it using the ChatState function. This pattern is commonly used in React applications to manage and share global state across different components.
