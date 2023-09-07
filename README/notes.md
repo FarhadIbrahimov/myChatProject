@@ -1,4 +1,5 @@
-$${\color{ChatBox}Green}$$
+$${\color{green}ChatBox}$$
+
 component is responsible for rendering a chat interface when a chat is selected. It relies on the selectedChat state from the ChatState context and uses the Chakra UI library for styling. The exact functionality related to fetchAgain and setFetchAgain
 
 ChatPage component sets up the structure of the chat page, conditionally rendering components based on the presence of a user and passing necessary props to child components for managing chat-related functionality.
