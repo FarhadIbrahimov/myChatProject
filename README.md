@@ -85,7 +85,7 @@ If I missed something , feel free to add or correct by contributing.
 
 ## _Project Management Tool Used is Azure Boards, ERD and deployment links_
 
-If you want to check it out, [click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP).
+If you want to check Project Managment tool i used [click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP).
 
 ### Entity-Relationship Diagram (ERD)
 
