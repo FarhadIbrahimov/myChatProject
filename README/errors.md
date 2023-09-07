@@ -56,3 +56,5 @@ app.use(errorHandler);
 ##### when chat is being created it is loading animation for it
 
 ##### when creating GroupChat, then if adding another user to My Chats from search User input, receive an error of duplicate keys , if different user no errors
+
+#### stored chats do not show timestamp

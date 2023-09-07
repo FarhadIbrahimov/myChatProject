@@ -21,7 +21,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
       const { data } = await axios.get(`/api/chat`, config);
-      // console.log(data);
+      console.log(data);
       setChats(data);
     } catch (error) {
       toast({
@@ -98,14 +98,16 @@ const MyChats = ({ fetchAgain }) => {
               >
                 <Text>
                   {!chat.isGroupChat
-                    ? getSender(loggedUser, chat.users)
+                    ? loggedUser && chat.users
+                      ? getSender(loggedUser, chat.users)
+                      : "Loading..." // Display loading message when data is not available
                     : chat.chatName}
                 </Text>
               </Box>
             ))}
           </Stack>
         ) : (
-          <ChatLoading />
+          <ChatLoading /> // Display loading component when chats data is not available
         )}
       </Box>
     </Box>
