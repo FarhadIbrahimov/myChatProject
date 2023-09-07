@@ -100,5 +100,5 @@ You can view my ERD [here](./public/documents/ERD.pdf).
 - Azure (Not ready yet)
 
 - Vercel: [https://my-chat-project-764z.vercel.app/](https://my-chat-project-764z.vercel.app/)
-- Render: [https://chatio-nryo.onrender.com](https://chatio-nryo.onrender.com)
+- Render: [Render Backend](https://backend-ptqb.onrender.com)
 - Netlify: [https://meek-pothos-253fc5.netlify.app](https://meek-pothos-253fc5.netlify.app)
