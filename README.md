@@ -83,8 +83,14 @@ If I missed something , feel free to add or correct by contributing.
 
 ## I hope these guides will help you step-by-step in setting up your MERN Stack project, building user authentication, and handling errors efficiently.
 
-### Project Management Tool Used is Azure Boards
+## _Project Management Tool Used is Azure Boards, ERD and deployment links_
 
 If you want to check it out [Click here](https://dev.azure.com/farhadibrahimov/CHAT%20APP)
 
 My ERD could be viewed [here](./public/documents/ERD.pdf)
+
+Deployment links
+
+[Vercel](https://my-chat-project-764z.vercel.app/)
+[Render](https://chatio-nryo.onrender.com)
+[Netlify](https://meek-pothos-253fc5.netlify.app)
