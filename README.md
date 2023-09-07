@@ -83,4 +83,6 @@ If I missed something , feel free to add or correct by contributing.
 
 ## I hope these guides will help you step-by-step in setting up your MERN Stack project, building user authentication, and handling errors efficiently.
 
-### Project Management Tool Used is [Azure Boards](https://dev.azure.com/farhadibrahimov/CHAT%20APP)
+### Project Management Tool Used is Azure Boards
+
+If you want to check it out [Cick Here](https://dev.azure.com/farhadibrahimov/CHAT%20APP)
