@@ -26,14 +26,30 @@ const sendMessages = asyncHandler(async (req, res) => {
       path: "chat.users",
       select: "name pic email",
     });
+    console.log(message);
 
-    await Chat.findByIdAndUpdate(req.body.chatId, {
+    let chatHistroy = await Chat.findByIdAndUpdate(req.body.chatId, {
       latestMessage: message,
     });
+    console.log(req.body.chatId);
+
     res.json(message);
   } catch (error) {
     res.status(400);
     throw new Error(error.message);
   }
 });
-module.exports = { sendMessages };
+
+const allMessages = asyncHandler(async (req, res) => {
+  try {
+    const messages = await Message.find({ chat: req.params.chatId })
+      .populate("sender", "name pic email")
+      .populate("chat");
+    res.json(messages);
+  } catch (error) {
+    res.status(400);
+    throw new Error(error.message);
+  }
+});
+
+module.exports = { sendMessages, allMessages };
