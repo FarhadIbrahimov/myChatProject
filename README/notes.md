@@ -35,8 +35,8 @@ is a versatile component that allows users to manage group chats by renaming the
 $${\color{orange}ChatProvider}$$
 this code sets up a context provider for managing chat-related state, including user information, selected chats, and chat conversations. The context provider ensures that this state is accessible to any component within its descendant tree that wants to consume it using the ChatState function. This pattern is commonly used in React applications to manage and share global state across different components.
 
-_$${\color{purple}ChatContext}$$
-A new context named ChatContext is created using the createContext function. This context will be used to store and share chat-related state across different parts of the application._
+$${\color{purple}ChatContext}$$
+_A new context named ChatContext is created using the createContext function. This context will be used to store and share chat-related state across different parts of the application._
 
 $${\color{purple}ChatContext.Provider}$$
 This component wraps its children with the ChatContext.Provider. It provides the chat-related state and functions to its descendants through the context's value prop.
