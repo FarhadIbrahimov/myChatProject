@@ -81,7 +81,7 @@ If I missed something , feel free to add or correct by contributing.
 | [8.Creating Functionality for Sign Up Client side](./README/CreatingFunctionalityForSignUpClientSide.md) | Enhance the sign-up functionality      |
 | [9.Creating Search User and Create Chat](/README/workingOnSearchUserAndCreateChat.md)                    | Search User and Create Chat            |
 
-## I hope these guides will help you step-by-step in setting up your MERN Stack project, building user authentication, and handling errors efficiently.
+#### _I hope these guides will help you step-by-step in setting up your MERN Stack project, building user authentication, and handling errors efficiently._
 
 ## _Project Management Tool Used is Azure Boards, ERD and deployment links_
 
