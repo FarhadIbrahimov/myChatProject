@@ -46,7 +46,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.get(`/api/user?search=${search}`, config);
-      console.log(data);
+      // console.log("This is UpdateGroupChatModal.jsx",data);
       setLoading(false);
       setSearchResult(data);
     } catch (error) {
@@ -185,12 +185,12 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
       );
 
       user1._id === user._id ? setSelectedChat() : setSelectedChat(data);
-      console.log(fetchAgain);
+
       setFetchAgain(!fetchAgain);
       fetchMessages();
       setLoading(false);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       toast({
         title: "Error Occurred!",
         description: error,

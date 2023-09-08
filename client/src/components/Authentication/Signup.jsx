@@ -45,7 +45,7 @@ const Signup = () => {
       });
       return;
     }
-    console.log(name, email, password, pic);
+    console.log("This is Signup.jsx file log", name, email, password, pic);
     try {
       const config = {
         headers: {
@@ -62,7 +62,7 @@ const Signup = () => {
         },
         config
       );
-      console.log(data);
+      // console.log("This is Signup.jsx file log", name, email, password, pic);
       toast({
         title: "Registration Successful",
         status: "success",
@@ -111,7 +111,7 @@ const Signup = () => {
         .post("https://api.cloudinary.com/v1_1/nophelet/image/upload", data)
         .then((response) => {
           setPic(response.data.url.toString());
-          console.log(response.data.url.toString());
+          // console.log(response.data.url.toString());
           setPicLoading(false);
         })
         .catch((error) => {

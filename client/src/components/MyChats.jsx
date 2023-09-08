@@ -21,7 +21,7 @@ const MyChats = ({ fetchAgain }) => {
         },
       };
       const { data } = await axios.get(`/api/chat`, config);
-      console.log(data);
+      console.log("This is Group Chat Data in MyChats.jsx", data);
       setChats(data);
     } catch (error) {
       toast({

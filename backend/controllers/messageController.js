@@ -26,12 +26,12 @@ const sendMessages = asyncHandler(async (req, res) => {
       path: "chat.users",
       select: "name pic email",
     });
-    console.log(message);
+    // console.log(message);
 
     let chatHistroy = await Chat.findByIdAndUpdate(req.body.chatId, {
       latestMessage: message,
     });
-    console.log(req.body.chatId);
+    // console.log(req.body.chatId);
 
     res.json(message);
   } catch (error) {

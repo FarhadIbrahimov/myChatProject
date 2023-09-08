@@ -15,6 +15,7 @@ import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./styles.css";
+import ScrollableChat from "./ScrollableChat";
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [messages, setMessages] = useState([]);
@@ -40,7 +41,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         `/api/message/${selectedChat._id}`,
         config
       );
-      console.log(messages);
+      console.log("This is fetchMessages", messages);
       setMessages(data);
       setLoading(false);
 
@@ -79,14 +80,14 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
           config
         );
 
-        console.log(data);
+        // console.log(data);
 
         setMessages([...messages, data]);
 
         // socket.emit("new message", data);
       } catch (error) {
         toast({
-          title: "Error Occured!",
+          title: "Error Occurred!",
           description: "Failed to send the Message",
           status: "error",
           duration: 5000,
@@ -157,7 +158,9 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
                 margin="auto"
               />
             ) : (
-              <div className="messages">{/* <ScrollableChat/> */}</div>
+              <div className="messages">
+                <ScrollableChat messages={messages} />
+              </div>
             )}
             {/* when message send pressed the message should be sent */}
             <FormControl
