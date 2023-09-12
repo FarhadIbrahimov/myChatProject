@@ -30,4 +30,12 @@ const PORT = process.env.PORT || 5000;
 
 const server = app.listen(PORT, console.log(`Server Started on PORT ${PORT}`));
 
-const io = require("socket.io")(server, {});
+const io = require("socket.io")(server, {
+  pingTimeout: 60000,
+  cors: { origins: "http://localhost:5000" },
+});
+
+//creating connection
+io.on("connection", (socket) => {
+  console.log("connected to socket.io");
+});
