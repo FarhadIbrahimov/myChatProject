@@ -17,6 +17,8 @@ import axios from "axios";
 import "./styles.css";
 import ScrollableChat from "./ScrollableChat";
 
+const ENDPOINT = "http://localhost:5000";
+
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
