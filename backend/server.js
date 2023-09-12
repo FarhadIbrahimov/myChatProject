@@ -8,6 +8,7 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
+const { log } = require("console");
 
 dotenv.config();
 connectDB();
@@ -38,4 +39,25 @@ const io = require("socket.io")(server, {
 //creating connection
 io.on("connection", (socket) => {
   console.log("connected to socket.io");
+
+  socket.on("setup", (userData) => {
+    socket.join(userData._id);
+    // log("joined", userData._id);
+    socket.emit("connected");
+  });
+
+  socket.on("join chat", (room) => {
+    socket.join(room);
+    console.log("joined", room);
+  });
+  socket.on("new message", (enwMessageReceived) => {
+    let chat = newMessageReceived.chat;
+
+    if (!chat.users) return console.log("chat.users not defined");
+
+    chat.users.forEach((user) => {
+      if (user._id == newMessageReceived.sender._id) return;
+      socket.to(user._id).emit("message received", newMessageReceived);
+    });
+  });
 });
