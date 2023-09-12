@@ -49,6 +49,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       console.log("This is fetchMessages", messages);
       setMessages(data);
       setLoading(false);
+      socket.emit("join chat", selectedChat._id); //creating a new room for the chat
 
       // socket.emit("join chat", selectedChat._id);
     } catch (error) {
