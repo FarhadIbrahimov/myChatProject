@@ -77,6 +77,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     fetchMessages();
     selectedChatCompare = selectedChat;
   }, [selectedChat]);
+
   useEffect(() => {
     socket.on("message received", (newMessageReceived) => {
       if (
@@ -110,10 +111,8 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         );
 
         // console.log(data);
-
+        socket.emit("new message", data);
         setMessages([...messages, data]);
-
-        // socket.emit("new message", data);
       } catch (error) {
         toast({
           title: "Error Occurred!",
